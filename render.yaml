@@ -44,7 +44,8 @@ services:
 databases:
   - name: git-scm-db
     region: oregon
-    plan: starter
+    plan: basic-256mb
+    diskSizeGB: 1
 
 envVarGroups:
   - name: git-scm-shared
