@@ -7,10 +7,12 @@ inherit_gem:
     - config/rails.yml
 
 AllCops:
-  TargetRubyVersion: 2.7
+  TargetRubyVersion: 3.3
+  # Keep the opt-in cop policy used by the previous GitHub configuration.
+  DisabledByDefault: true
 
 Performance:
-  enabled: true
+  Enabled: true
 
 Style/FrozenStringLiteralComment:
   Exclude:
@@ -24,3 +26,13 @@ Rails/TimeZone:
 
 GitHub/InsecureHashAlgorithm:
   Enabled: false
+
+# Preserve the previous configuration's formatting policy during the Ruby upgrade.
+Layout/IndentationConsistency:
+  Enabled: false
+
+Layout/IndentationWidth:
+  Enabled: false
+
+Style/HashSyntax:
+  EnforcedShorthandSyntax: never
