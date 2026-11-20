@@ -7,7 +7,7 @@ class DownloadsController < ApplicationController
 
   def latest
     latest = Version.latest_version.name
-    render text: latest
+    render plain: latest
   end
 
   def guis
